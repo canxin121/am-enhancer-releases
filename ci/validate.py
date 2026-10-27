@@ -16,4 +16,5 @@ with tempfile.TemporaryDirectory() as d:
 p=json.loads(data);assert p['schema']==1
 policy=json.loads((r/'distribution-policy.json').read_text())
 if policy['mode']=='hold':assert p['available'] is False,'A held distribution must not advertise an APK'
-print('Public boundary and signed update channel verified; this is not an Android build.')
+workflow=(r/'.github/workflows/build.yml').read_text();assert 'workflow_call:' in workflow and 'secrets.' not in workflow and 'private-source' in workflow
+print('Public boundary, signed channel and secret-free reusable workflow verified; this check is not an Android compilation.')

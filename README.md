@@ -1,13 +1,11 @@
 # AM HiFi
 
-公开发布通道。应用源码保留在私有仓库；这里仅放构建配置、更新清单和发布说明。
+公开构建配置与 APK 发布通道。应用源码仍在私有仓库。
 
-- 版本固定：**0.1.0**，安装号 **4008**。
-- 更新入口：Apple Music → 设置 → USB HiFi → 模块更新。
-- 自动检查更新；下载后校验签名，交由 Android 确认安装。
+- 版本固定 **0.1.0 / 4008**。
+- 本仓库提供 [Build APK](.github/workflows/build.yml) 可复用工作流。
+- 私有仓库调用它，在 GitHub 托管 runner 上编译三个 ABI 并运行测试。
+- 构建日志和未签名产物属于私有仓库；没有上传源码或私钥。
+- 安装包使用服务器上原签名处理。公开 APK 分发另行启用，不阻挡编译。
 
-## 当前发布状态
-
-公开 APK 发布尚未启用。现有后端含 GPL-3.0 代码，在不提供对应源码的要求下，需要先取得适用的另行分发授权。不会擅自公开私有源码，也不会把未公开的草稿标为可更新。
-
-[Actions 配置](ci/SETUP.md) · [发布条件](DISTRIBUTION.md)
+[构建入口](https://github.com/canxin121/apple-music-usb-hifi/actions/workflows/android-build.yml) · [使用说明](ci/SETUP.md)
