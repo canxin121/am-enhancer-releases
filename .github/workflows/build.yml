@@ -11,7 +11,7 @@ on:
         required: true
         type: string
 permissions:
-  contents: read
+  contents: write
 jobs:
   android:
     if: github.repository == 'canxin121/apple-music-usb-hifi' && github.ref == 'refs/heads/main'
@@ -81,14 +81,10 @@ jobs:
           SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
           PIPELINE_COMMIT: ${{ inputs.pipeline_commit }}
         run: python3 channel/ci/verify_artifact.py private-source "$RUNNER_TEMP/deliverables" "$RUNNER_TEMP/private-build.log"
-      - name: Upload private build artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: AMHiFi-0.1.0-${{ steps.source.outputs.short }}-unsigned
-          path: ${{ runner.temp }}/deliverables/
-          if-no-files-found: error
-          retention-days: 14
-          compression-level: 6
+      - name: Save deliverables to existing private Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 channel/ci/upload_private_build.py "$RUNNER_TEMP/deliverables"
       - name: Remove source and build intermediates
         if: always()
         run: |
