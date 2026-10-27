@@ -1,11 +1,15 @@
 # AM HiFi
 
-公开构建配置与 APK 发布通道。应用源码仍在私有仓库。
+公开构建流程与 APK 发布通道。应用源码保留在私有仓库。
 
-- 版本固定 **0.1.0 / 4008**。
-- 本仓库提供 [Build APK](.github/workflows/build.yml) 可复用工作流。
-- 私有仓库调用它，在 GitHub 托管 runner 上编译三个 ABI 并运行测试。
-- 构建日志在私有 Actions，未签名产物保存到私有仓库现有的 `v0.1.0` Release；没有上传源码或私钥。
-- 安装包使用服务器上原签名处理。公开 APK 分发另行启用，不阻挡编译。
+**GitHub Actions 已实际编译通过**：ARM64、ARMv7、x86_64，Java/原生测试和16KB对齐检查通过。
 
-[构建入口](https://github.com/canxin121/apple-music-usb-hifi/actions/workflows/android-build.yml) · [使用说明](ci/SETUP.md)
+- 固定版本：**0.1.0 / 4008**。
+- [公开构建工作流](.github/workflows/build.yml)：由私有仓库调用。
+- [成功构建记录](https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40464093668)：需要私有仓库权限。
+- [验证摘要](ci/BUILD_RESULT.json)：云端编译，服务器原密钥签名，签名前后程序内容一致。
+- [发布页](https://github.com/canxin121/amhifi-releases/releases)：当前安装包为草稿；尚未开放公开下载。
+
+后续向私有仓库main推送源码会自动构建，也可在其Actions页面手动运行。没有上传应用源码、签名私钥或长期访问令牌。
+
+[使用说明](ci/SETUP.md)

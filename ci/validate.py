@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,base64,subprocess,tempfile
 r=Path(__file__).resolve().parents[1]
-allow={'README.md','DISTRIBUTION.md','distribution-policy.json','update.json','update-certificate.der','ci',' .github'.strip()}
+allow={'.gitignore','README.md','DISTRIBUTION.md','distribution-policy.json','update.json','update-certificate.der','ci',' .github'.strip()}
 for x in r.iterdir():
  if x.name=='.git':continue
  assert x.name in allow, 'Unexpected public root: '+x.name

@@ -1,0 +1,33 @@
+{
+  "versionName": "0.1.0",
+  "versionCode": 4008,
+  "sourceCommit": "169a9e7aed0fc2b598103f78b3809309c8072372",
+  "pipelineCommit": "60d50a3708364ab181c583c15bf1e9738ca7a0f6",
+  "runId": "40464093668",
+  "runUrl": "https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40464093668",
+  "buildId": "22079988422437156bb2f4a04b9522ce1d4ddcba156302d174b164a84c77025d",
+  "unsignedSha256": "9299527451f89fe90092e5f2c0e12c5c17fb4d0465f762af95c7b18a714b89b6",
+  "sha256": "81110b5aa2929cafea2c99d1df94c447f8e7a69d633cec61c4641adfd4ba9211",
+  "signedLocally": true,
+  "ciPayloadUnchanged": true,
+  "sourceIncluded": false,
+  "signerCertificateSha256": "e2cacbdede8e2c75899f132ca7232f1d38e86258cdc1a4121f0e7a5a399743c5",
+  "tests": {
+    "javaPlayback": 12468,
+    "gainClockFlush": 80,
+    "usbVolume": 1983,
+    "logPrivacy": 115,
+    "versionPolicy": 50,
+    "faultLatch": 2007,
+    "nativeTargets": 2
+  },
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86_64"
+  ],
+  "githubActionsConclusion": "success",
+  "applicationSourcesPublic": false,
+  "signingKeyUploaded": false,
+  "publishedToPublic": false
+}
