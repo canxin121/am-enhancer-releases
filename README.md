@@ -6,7 +6,7 @@
 
 - 固定版本：**0.1.0 / 4008**。
 - [公开构建工作流](.github/workflows/build.yml)：由私有仓库调用。
-- [成功构建记录](https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40464093668)：需要私有仓库权限。
+- [成功构建记录](https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40469039088)：需要私有仓库权限。
 - [验证摘要](ci/BUILD_RESULT.json)：云端编译，服务器原密钥签名，签名前后程序内容一致。
 - [发布页](https://github.com/canxin121/amhifi-releases/releases)：当前安装包为草稿；尚未开放公开下载。
 

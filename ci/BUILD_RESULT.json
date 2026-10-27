@@ -1,17 +1,30 @@
 {
   "versionName": "0.1.0",
   "versionCode": 4008,
-  "sourceCommit": "169a9e7aed0fc2b598103f78b3809309c8072372",
+  "sourceCommit": "8f19e0aace7a8beaf4c395005124cc7984bba4d0",
   "pipelineCommit": "60d50a3708364ab181c583c15bf1e9738ca7a0f6",
-  "runId": "40464093668",
-  "runUrl": "https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40464093668",
-  "buildId": "22079988422437156bb2f4a04b9522ce1d4ddcba156302d174b164a84c77025d",
-  "unsignedSha256": "9299527451f89fe90092e5f2c0e12c5c17fb4d0465f762af95c7b18a714b89b6",
-  "sha256": "81110b5aa2929cafea2c99d1df94c447f8e7a69d633cec61c4641adfd4ba9211",
-  "signedLocally": true,
-  "ciPayloadUnchanged": true,
+  "runId": "40469039088",
+  "runUrl": "https://github.com/canxin121/apple-music-usb-hifi/actions/runs/40469039088",
+  "signed": true,
+  "requiresLocalOriginalSignature": true,
   "sourceIncluded": false,
-  "signerCertificateSha256": "e2cacbdede8e2c75899f132ca7232f1d38e86258cdc1a4121f0e7a5a399743c5",
+  "native": {
+    "arm64-v8a": {
+      "sha256": "9ee3c0e0cf0e96501fc2ec68c56b4424af75032d60273eee31768c07204bd7b8",
+      "bytes": 1307576,
+      "alignment16k": true
+    },
+    "armeabi-v7a": {
+      "sha256": "12175cb537c949a41c4ea922196dcebd85bb42ee33b1ba036fadf760d393658c",
+      "bytes": 895260,
+      "alignment16k": true
+    },
+    "x86_64": {
+      "sha256": "eb9d7db6ede371b553eae9f94876a508f0c57bfa67cbec913f6dedacee8857fc",
+      "bytes": 1283032,
+      "alignment16k": true
+    }
+  },
   "tests": {
     "javaPlayback": 12468,
     "gainClockFlush": 80,
@@ -21,13 +34,25 @@
     "faultLatch": 2007,
     "nativeTargets": 2
   },
-  "abis": [
-    "arm64-v8a",
-    "armeabi-v7a",
-    "x86_64"
-  ],
-  "githubActionsConclusion": "success",
-  "applicationSourcesPublic": false,
-  "signingKeyUploaded": false,
-  "publishedToPublic": false
+  "buildId": "016207f58a06ecba561f463c3d650d8ece06b727b7a04939c87aced5e9ba5345",
+  "buildEpoch": 1793087143,
+  "apkFile": "applemusic-usb-hifi-0.1.0.apk",
+  "bytes": 3650469,
+  "unsignedSha256": "1c8f4b210ce6fa5a2b7d166fcca0407715d215dd2ccab36bb641af263be7bebf",
+  "sha256": "7a31667a07d71823180b7093b2ec8b34a5124aa170b1301baf9c07ec99bfa9f3",
+  "signedLocally": true,
+  "signerCertificateSha256": "e2cacbdede8e2c75899f132ca7232f1d38e86258cdc1a4121f0e7a5a399743c5",
+  "ciPayloadUnchanged": true,
+  "runtimeVerification": {
+    "live-route-api37.txt": 56,
+    "background-api37.txt": 80,
+    "host-settings-api37.txt": 55,
+    "interfaces-api37.txt": 114,
+    "pcm-api37.txt": 38521,
+    "diagnostics-api37.txt": 463,
+    "diagnostics-reopen-api37.txt": 1
+  },
+  "backgroundIntervalMs": 66032,
+  "publishedToPublic": false,
+  "physicalUserROMOrDacVerified": false
 }
