@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/am-enhancer-icon.png" alt="AM Enhancer – user-selected red music-note icon" width="132"></p>
+
 # AM Enhancer
 
 公开构建流程与 APK 发布通道。应用源码保留在私有仓库。
