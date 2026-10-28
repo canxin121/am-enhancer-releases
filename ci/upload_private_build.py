@@ -1,12 +1,12 @@
 from pathlib import Path
 import os,sys,json,zipfile,hashlib,subprocess
-repo=os.environ['GITHUB_REPOSITORY'];assert repo=='canxin121/apple-music-usb-hifi','Delivery must remain in caller-private repository'
+repo=os.environ['GITHUB_REPOSITORY'];assert repo=='canxin121/am-enhancer','Delivery must remain in caller-private repository'
 metadata=json.loads(subprocess.check_output(['gh','api','repos/'+repo],text=True));assert metadata['private'] is True,'Refusing to expose build artifacts'
 folder=Path(sys.argv[1]);build=json.loads((folder/'BUILD.json').read_text());assert build['signed'] is False and build['sourceIncluded'] is False
 assert build['runId']==os.environ['GITHUB_RUN_ID']
 expected={build['apkFile'],'BUILD.json','SHA256SUMS','README.txt'};assert {p.name for p in folder.iterdir()}==expected,'Only verified deliverables may be uploaded'
 apk=folder/build['apkFile'];assert hashlib.sha256(apk.read_bytes()).hexdigest()==build['sha256']
-run=os.environ['GITHUB_RUN_ID'];attempt=os.environ.get('GITHUB_RUN_ATTEMPT','1');name='AMHiFi-0.1.0-'+build['sourceCommit'][:12]+'-run'+run+'-attempt'+attempt+'-unsigned.zip'
+run=os.environ['GITHUB_RUN_ID'];attempt=os.environ.get('GITHUB_RUN_ATTEMPT','1');name='AM-Enhancer-0.1.0-'+build['sourceCommit'][:12]+'-run'+run+'-attempt'+attempt+'-unsigned.zip'
 archive=folder.parent/name
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
  for p in sorted(folder.iterdir()):z.write(p,p.name)

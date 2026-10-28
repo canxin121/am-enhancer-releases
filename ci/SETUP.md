@@ -15,7 +15,7 @@ No deploy key, signing keystore, account token or new Actions secret is transfer
 Build from the private repository's `Build APK` Actions page, or:
 
 ```bash
-gh workflow run android-build.yml --repo canxin121/apple-music-usb-hifi --ref main
+gh workflow run android-build.yml --repo canxin121/am-enhancer --ref main
 ```
 
 Pushes to relevant main-branch source/build files also compile automatically. PRs and forks cannot run this source build. Build packages remain private on the existing `v0.1.0` Release, with unique run/attempt names. They contain only an **unsigned** APK, `BUILD.json`, `SHA256SUMS`, and a short install warning. Existing APKs and tags are not overwritten. This avoids dependence on the account’s exhausted Actions Artifact storage; no quota increase, paid purchase or unrelated artifact deletion is performed. Do not install an unsigned APK or generate a replacement signing key.

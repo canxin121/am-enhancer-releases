@@ -14,7 +14,7 @@ permissions:
   contents: write
 jobs:
   android:
-    if: github.repository == 'canxin121/apple-music-usb-hifi' && github.ref == 'refs/heads/main'
+    if: github.repository == 'canxin121/am-enhancer' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
@@ -37,7 +37,7 @@ jobs:
       - name: Checkout pinned public pipeline
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          repository: canxin121/amhifi-releases
+          repository: canxin121/am-enhancer-releases
           ref: ${{ inputs.pipeline_commit }}
           path: channel
           persist-credentials: false
